@@ -96,6 +96,10 @@ li {
   margin-bottom: 40px;
 }
 
+body {
+  position: relative;
+}
+
 article {
   margin-bottom: 60px;
 }
@@ -167,4 +171,39 @@ nav {
 .post-img {
   width: 100%;
   height: auto;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h3 + p::first-line {
+  color: red;
+}
+
+h2{
+  position: relative;
+}
+
+h2::after {
+  content:"TOP";
+  background-color: #ffe70e;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  color:#444;
 }
