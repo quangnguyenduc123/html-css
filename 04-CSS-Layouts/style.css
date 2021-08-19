@@ -2,6 +2,7 @@
   /* border-top: 10px solid #1098ad; */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* PAGE SECTIONS */
@@ -26,7 +27,7 @@ body {
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* height: 80px; */
 }
 
@@ -36,7 +37,7 @@ nav {
 }
 
 article {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .post-header {
@@ -49,7 +50,6 @@ aside {
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
   padding: 50px 40px;
-  box-sizing: border-box;
 }
 
 /* SMALLER ELEMENTS */
@@ -80,6 +80,7 @@ h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 p {
@@ -97,11 +98,20 @@ ol {
 li {
   font-size: 20px;
   margin-bottom: 10px;
+  /* display: inline; */
 }
 
 li:last-child {
   margin-bottom: 0;
 }
+
+/* footer p {
+  font-size: 16px;
+} */
+
+/* article header p {
+  font-style: italic;
+} */
 
 #author {
   font-style: italic;
@@ -116,8 +126,14 @@ li:last-child {
   font-size: 18px;
   font-weight: bold;
 }
+
+/* ul {
+  list-style: none;
+} */
+
 .related {
   list-style: none;
+  margin-left: 0;
 }
 
 body {
@@ -181,7 +197,6 @@ nav a:link {
   display: block; */
 
   margin-right: 30px;
-  margin-top: 10px;
   display: inline-block;
 }
 
@@ -250,6 +265,8 @@ nav p {
   font-size: 18px;
 } */
 
+/* FLOATS */
+/*
 .author-img {
   float: left;
   margin-bottom: 20px;
@@ -269,10 +286,14 @@ nav {
   float: right;
 }
 
+.clear {
+  clear: both;
+}
+
 .clearfix::after {
+  clear: both;
   content: "";
   display: block;
-  clear: both;
 }
 
 article {
@@ -288,8 +309,4 @@ aside {
 footer {
   clear: both;
 }
-
-.related {
-  list-style: none;
-  margin-left: 0;
-}
+*/
