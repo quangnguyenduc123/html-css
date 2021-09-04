@@ -1,36 +1,14 @@
-/*
+/**************************/
+/* HEADER */
+/**************************/
 
------- 01 TYPOGRAPHY SYSTEM
-*/
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Rubik", sans-serif;
-  line-height: 1;
-  font-weight: 400;
-  color: #555;
-}
-
-
-
-/*******************************/
-/* HEADER COMPONENTS */
-/*******************************/
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fdf2e9;
 
+  /* Because we want header to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
 }
@@ -39,9 +17,10 @@ body {
   height: 2.2rem;
 }
 
-/*******************************/
-/* NAVIGATION COMPONENTS */
-/*******************************/
+/**************************/
+/* NAVIGATION */
+/**************************/
+
 .main-nav-list {
   list-style: none;
   display: flex;
@@ -51,9 +30,9 @@ body {
 
 .main-nav-link:link,
 .main-nav-link:visited {
-  text-decoration: none;
   display: inline-block;
-  color:#333;
+  text-decoration: none;
+  color: #333;
   font-weight: 500;
   font-size: 1.8rem;
   transition: all 0.3s;
@@ -73,17 +52,17 @@ body {
 }
 
 .main-nav-link.nav-cta:hover,
-.main-nav-link.nav-cta:active{
+.main-nav-link.nav-cta:active {
   background-color: #cf711f;
 }
 
+/**************************/
+/* HERO SECTION */
+/**************************/
 
-/*******************************/
-/* HERO COMPONENTS */
-/*******************************/
 .section-hero {
   background-color: #fdf2e9;
-  padding: 4.8 rem 0 9.6rem 0;
+  padding: 4.8rem 0 9.6rem 0;
 }
 
 .hero {
@@ -92,8 +71,8 @@ body {
   padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
   gap: 9.6rem;
+  align-items: center;
 }
 
 .hero-description {
@@ -126,7 +105,7 @@ body {
 }
 
 .delivered-imgs img:last-child {
-  margin-right: 0;
+  margin: 0;
 }
 
 .delivered-text {
@@ -139,10 +118,9 @@ body {
   font-weight: 700;
 }
 
-
-/*******************************/
-/* AS FEATURED IN COMPONENTS */
-/*******************************/
+/**************************/
+/* FEATURED IN SECTION */
+/**************************/
 
 .section-featured {
   padding: 4.8rem 0 3.2rem 0;
@@ -169,56 +147,52 @@ body {
   opacity: 50%;
 }
 
-/*******************************/
-/* HOW IT WORKS COMPONENTS */
-/*******************************/
+/**************************/
+/* HOW IT WORKS SECTION */
+/**************************/
 
 .section-how {
   padding: 9.6rem 0;
 }
 
-.step-img{
-  width: 50%;
-}
-
-.step-number{
-  font-size: 9.8rem;
+.step-number {
+  font-size: 8.6rem;
   font-weight: 600;
   color: #ddd;
   margin-bottom: 1.2rem;
 }
 
-.step-description{
+.step-description {
   font-size: 1.8rem;
   line-height: 1.8;
 }
 
 .step-img-box {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  position: relative;
 }
 
 .step-img-box::before,
 .step-img-box::after {
-  content:"";
+  content: "";
   display: block;
-  
   border-radius: 50%;
-
   position: absolute;
   top: 50%;
   left: 50%;
-
-  transform: translate(-50%, -50%) 
-
+  transform: translate(-50%, -50%);
 }
 
 .step-img-box::before {
   width: 60%;
+  /* height: 60%; */
+
+  /* 60% of parent's width */
   padding-bottom: 60%;
+
   background-color: #fdf2e9;
   z-index: -2;
 }
@@ -230,14 +204,14 @@ body {
   z-index: -1;
 }
 
-.step-img{
+.step-img {
   width: 35%;
+  /* z-index: 10; */
 }
 
-
-/*******************************/
-/* MEALS COMPONENTS */
-/*******************************/
+/**************************/
+/* MEALS SECTION */
+/**************************/
 
 .section-meals {
   padding: 9.6rem 0;
@@ -266,23 +240,21 @@ body {
 }
 
 .tag {
-    display: inline-block;
-    padding: 0.4rem 0.8rem;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: #333;
-    border-radius: 100px;
-    font-weight: 600;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 100px;
+  font-weight: 600;
 }
 
 .tag--vegetarian {
   background-color: #51cf66;
 }
-
 .tag--vegan {
   background-color: #94d82d;
 }
-
 .tag--paleo {
   background-color: #ffd43b;
 }
@@ -323,14 +295,14 @@ body {
   font-size: 1.8rem;
 }
 
-/*******************************/
-/* TESTIMONIAL COMPONENTS */
-/*******************************/
+/**************************/
+/* TESTIMONIALS SECTION */
+/**************************/
 
 .section-testimonials {
   background-color: #fdf2e9;
   display: grid;
-  grid-template-columns: 50fr 45fr;
+  grid-template-columns: 55fr 45fr;
   align-items: center;
 }
 
@@ -362,10 +334,6 @@ body {
   color: #6f6f6f;
 }
 
-.gallery-item {
-  overflow: hidden;
-}
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -373,7 +341,11 @@ body {
   padding: 1.6rem;
 }
 
-.gallery-item img{
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
   display: block;
   width: 100%;
   transition: all 0.4s;
@@ -383,33 +355,34 @@ body {
   transform: scale(1.1);
 }
 
-/*******************************/
-/* PRICING COMPONENTS */
-/*******************************/
+/**************************/
+/* MEALS SECTION */
+/**************************/
 
 .section-pricing {
   padding: 9.6rem 0;
 }
 
-.pricing-plan {
+.princing-plan {
   border-radius: 11px;
+
   width: 75%;
 }
 
-.pricing-plan--starter {
+.princing-plan--starter {
   justify-self: end;
   border: 2px solid #fdf2e9;
   padding: 4.6rem;
 }
 
-.pricing-plan--complete {
+.princing-plan--complete {
   background-color: #fdf2e9;
   padding: 4.8rem;
   position: relative;
   overflow: hidden;
 }
 
-.pricing-plan--complete::after {
+.princing-plan--complete::after {
   content: "Best value";
   position: absolute;
   top: 6%;
@@ -419,10 +392,8 @@ body {
   font-size: 1.4rem;
   font-weight: 700;
   color: #333;
-
   background-color: #ffd43b;
   padding: 0.8rem 8rem;
-
   transform: rotate(45deg);
 }
 
@@ -431,7 +402,7 @@ body {
   margin-bottom: 4.8rem;
 }
 
-.plan-name { 
+.plan-name {
   color: #cf711f;
   font-weight: 600;
   font-size: 2rem;
@@ -459,7 +430,199 @@ body {
   color: #6f6f6f;
 }
 
-.plan-sign-up{
+.plan-sing-up {
   text-align: center;
   margin-top: 4.8rem;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.feature-icon {
+  color: #e67e22;
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: #fdf2e9;
+  margin-bottom: 3.2rem;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/**************************/
+/* CTA SECTION */
+/**************************/
+
+.section-cta {
+  /* top / right / bottom / left */
+  /* padding: 9.6rem 0 12.8rem 0; */
+
+  /* top / horizontal / left */
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* background-color: #e67e22; */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  overflow: hidden;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+
+.cta .heading-secondary {
+  /* color: #45260a; */
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }
